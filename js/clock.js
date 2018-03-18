@@ -6,7 +6,7 @@ function setup(){
 
 function draw(){
     background(0);
-   
+
     let valueHour = hour() % 12;
     let valueMinute = minute();
     let valueSecond = second();
@@ -20,15 +20,11 @@ function draw(){
     }
 
     if (valueMinute < 10){
-        new Digit(0,3).draw();
-        new Digit(valueMinute, 4).draw();
+        new Digit(0,2).draw();
+        new Digit(valueMinute, 3).draw();
     } else {
         new Digit(floor(valueMinute/10),2).draw();
         new Digit( (valueMinute%10),3).draw();
     }
 
 }
-
-
-
-
